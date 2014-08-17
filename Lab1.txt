@@ -1,0 +1,37 @@
+1. We?re using git as our versioning system for iOS and Android projects. What is git, and what makes it
+different to other versioning systems?
+
+Git is a free and open source distributed version control system. What makes Git different from other versioning
+systems is its branching model. This allows the users to have multiple local branches independent of each other,
+which in turn allows for Frictionless Context Switching, Role-Based Codelines, Feature Based Workflow and
+Disposable experimentation.
+
+
+2. What is a branch? When is it the right time to create a branch?
+
+A branch is a lightweight movable pointer to a commit. A branch by default (in Git) is refered to as a master,
+which points to the last commit you made, when you make new commits, it moves forward automatically.
+
+Branches useful when you need to diverge your work from your current version to hotfix a a previous version which
+can then be merged to your most recent version once fixed.
+
+
+3. If you?ve forgotten to setup a git repository in the IDE, what is the command to create a git repository
+and add all created files
+
+	git init
+	git add *.c
+	git add README
+	git commit -m 'initial project version'
+
+4. Sometimes you don?t want to include all files in a repository, how do you avoid this?
+
+You can create file listing patterns to match said files name .gitignore
+	e.g. cat .gitignore
+	     *.[oa] (ignore any files ending in .o or .a)
+	     
+
+5. Once you?ve made changes to a file/s, what?s the command to save these into the repository? When is
+it recommended that you do this?
+
+git commit
